@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+		xmlns:sap="http://www.sap.com/Protocols/SAPData">
+		<Schema Namespace="com.sap.appiot" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="DefaultImagePropertySet.DefaultImageProperty" Type="Edm.String"></Property>
+				<Property Name="DefaultImagePropertySet.DefaultImageProperty.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="propsetData.Brand" Type="Edm.String"></Property>
+				<Property Name="propsetData.Brand.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="propsetData.Plate" Type="Edm.String"></Property>
+				<Property Name="propsetData.Plate.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="Thing">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false">
+					<Documentation>
+						<LongDescription>Thing unique ID</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingISOCode" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing Language code</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing description</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingName" Type="Edm.String" Nullable="false">
+					<Documentation>
+						<LongDescription>Thing name</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingExternalId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing external id</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingType" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing Type ID associated with the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ObjectGroup" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Object group used to create the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPName" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Business partner name associated for the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPLandlinePhoneNumber" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Landline phone number of Business partner</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPMobilePhoneNumber" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Mobile phone number of Business partner</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCustomerId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Business partner ID associated for the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingRegionDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Region where Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCountryDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Country where the Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCountryId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Country code where the Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCommunicationData" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing address details</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingLocationId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing location ID</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="AlternateId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing AlternateId</LongDescription>
+					</Documentation>
+				</Property>
+				<NavigationProperty Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData"
+					Relationship="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetDataEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures"
+					Relationship="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasuresEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet"
+					Relationship="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySetEntities"></NavigationProperty>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="propsetMeasures.datetime" Type="Edm.DateTime"></Property>
+				<Property Name="propsetMeasures.datetime.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="propsetMeasures.latitude" Type="Edm.Double"></Property>
+				<Property Name="propsetMeasures.latitude.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="propsetMeasures.longitude" Type="Edm.Double"></Property>
+				<Property Name="propsetMeasures.longitude.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<Association Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData" Multiplicity="1"
+					Role="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetDataEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures" Multiplicity="1"
+					Role="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasuresEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet" Multiplicity="1"
+					Role="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySetEntities"></End>
+			</Association>
+			<EntityContainer Name="CompositeThingsThingType" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySets"
+					EntityType="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet"></EntitySet>
+				<EntitySet Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetDatas"
+					EntityType="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData"></EntitySet>
+				<EntitySet Name="Things" EntityType="com.sap.appiot.Thing"></EntitySet>
+				<EntitySet Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasuress"
+					EntityType="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures"></EntitySet>
+				<AssociationSet Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData"
+					Association="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetData">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetDatas"
+						Role="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetDataEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures"
+					Association="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasures">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasuress"
+						Role="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__propsetMeasuresEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet"
+					Association="com.sap.appiot.DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySet">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySets"
+						Role="DYN_ENT_iot_529406714d2841ad82361fa3bc692b1d_gve_geo__DefaultImagePropertySetEntities"></End>
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
